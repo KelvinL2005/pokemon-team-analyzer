@@ -14,9 +14,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d4d24d2;
+    --foreground: #c4baba;
   }
+}
+
+/* =========================
+   Page Layout
+========================= */
+.page {
+ max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 body {
@@ -24,16 +39,172 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.slot-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e9e9e9;
+}
+
+.plus {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.slot-filled {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slot-image {
+  width: 70px;
+  height: 70px;
+  image-rendering: pixelated;
+}
+
+.slot-name {
+  font-size: 12px;
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* =========================
+   Team Slot Styles
+========================= */
+
 .team-slot {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    border-radius: 8px;
-    cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease;
 }
+
 .team-slot:hover {
-    border-color: #3b82f6;
+  transform: scale(1.05);
+  cursor: pointer;
+  border-color: #3b82f6;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Pokémon Display Styles
+========================= */
+.pokemon-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.pokemon-card {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+}
+
+.team-count {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.poke-types {
+  display: flex;
+  gap: 8px;
+}
+
+.type-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+  .type-fire {
+    background-color: #f08030;
+  }
+  .type-water {
+    background-color: #6890f0;
+  }
+  .type-grass {
+    background-color: #78c850;
+  }
+  .type-electric {
+    background-color: #f8d030;
+  }
+  .type-ice {     
+    background-color: #98d8d8;
+  }
+  .type-fighting {
+    background-color: #c03028;
+  }
+  .type-poison {
+    background-color: #a040a0;
+  }
+  .type-ground {
+    background-color: #e0c068;
+  }
+  .type-flying {
+    background-color: #a890f0;
+  }
+  .type-psychic {
+    background-color: #f85888;
+  } 
+  .type-bug {
+    background-color: #a8b820;
+  }
+  .type-rock {
+    background-color: #b8a038;
+  }
+  .type-ghost {
+    background-color: #705898;
+  }
+  .type-dragon {
+    background-color: #7038f8;
+  }
+  .type-dark {
+    background-color: #705848;
+  }
+  .type-steel {
+    background-color: #b8b8d0;
+  }
+  .type-fairy {
+    background-color: #ee99ac;
+  }
