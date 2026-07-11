@@ -8,9 +8,10 @@ export default function TeamSlot({
   onClick: () => void;
 }) {
   return (
-    <div className="team-slot" onClick={onClick}>
+    <div className="team-slot" onClick={onClick} role="button" tabIndex={0}>
       {pokemon ? (
         <div className="slot-filled">
+          <span className="slot-remove-hint">✕</span>
           <img
             src={pokemon.sprites.front_default ?? ""}
             alt={pokemon.name}
@@ -21,7 +22,7 @@ export default function TeamSlot({
       ) : (
         <div className="slot-empty">
           <div className="plus">+</div>
-          <p>Add Pokémon</p>
+          <p>Add</p>
         </div>
       )}
     </div>

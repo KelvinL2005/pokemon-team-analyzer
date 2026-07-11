@@ -1,3 +1,8 @@
+/**
+ * Maps each Pokémon type name to a CSS class name used by TypeBadge for coloring.
+ * Falls back to "type-normal" in TypeBadge if a type is missing here (shouldn't
+ * happen for the 18 official types, but guards against PokeAPI adding new ones).
+ */
 export const typeColors: Record<string, string> = {
   fire: "type-fire",
   water: "type-water",
